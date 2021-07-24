@@ -24,13 +24,17 @@ module.exports = {
 			{
 				test: /\.(ts|js)x?$/,
 				use: "babel-loader"
-			}
+			},
+			{
+				test: /\.css/,
+				use: ["style-loader", "css-loader"],
+			},
 		]
 
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			template: path.resolve(__dirname, "src/assets/index.html")
+			template: path.resolve(__dirname, "src/assets/html/index.html")
 		})
 	]
 
