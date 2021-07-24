@@ -1,4 +1,5 @@
 import React, { ReactElement, ReactNode } from 'react'
+import s from "./style.module.css"
 
 interface Props {
 	children: ReactNode;
@@ -6,7 +7,7 @@ interface Props {
 
 export default function MainLayout({ children }: Props): ReactElement {
 	return (
-		<div>
+		<div className={s["main-container"]}>
 			{children}
 		</div>
 	)
