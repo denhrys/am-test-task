@@ -18,15 +18,15 @@ export const articlesSlice = createSlice({
   name: 'articles',
   initialState,
   reducers: {
-    articlesRequested: (state) => {
+    getAllArticles: (state) => {
       state.loading = true;
       state.error = false;
     },
-    articlesRequestError: (state) => {
+    getAllArticlesError: (state) => {
       state.loading = false;
       state.error = true;
     },
-    articlesReceived: (state, action: PayloadAction<Row[]>) => {
+    allArticlesReceived: (state, action: PayloadAction<Row[]>) => {
       state.loading = false;
       state.error = false;
       state.data = action.payload
@@ -34,7 +34,7 @@ export const articlesSlice = createSlice({
   },
 })
 
-export const { articlesReceived, articlesRequestError, articlesRequested } = articlesSlice.actions
+export const { getAllArticles, getAllArticlesError, allArticlesReceived } = articlesSlice.actions
 
 export default articlesSlice.reducer
 
