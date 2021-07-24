@@ -15,7 +15,9 @@ export default function Routes(): ReactElement {
 					{
 						routes.map(({ path, component: Component }) => (
 							<Route key={path} path={path}>
-								<MainLayout><Component /></MainLayout>
+								<MainLayout>
+									<Component />
+								</MainLayout>
 							</Route>
 						))
 					}
