@@ -8,15 +8,15 @@ module.exports = {
 		filename: "bundle.js"
 	},
 	devServer: {
-		contentBase: "./build"
+		contentBase: "./build",
+		historyApiFallback: true
 	},
 	resolve: {
 		extensions: [".ts", ".tsx", ".js", ".jsx"],
 		alias: {
 			components: path.resolve(__dirname, "src/components/"),
-			reducers: path.resolve(__dirname, "src/reducers/"),
-			store: path.resolve(__dirname, "src/store/"),
-			actions: path.resolve(__dirname, "src/actions/"),
+			layouts: path.resolve(__dirname, "src/layouts/"),
+			routes: path.resolve(__dirname, "src/routes/"),
 		}
 	},
 	module: {
