@@ -3,6 +3,7 @@ import { nanoid } from 'nanoid';
 
 import type { RootState } from "../appStore"
 import { Article, Row } from 'helpers/articlesAPIClient';
+import { act } from 'react-dom/test-utils';
 
 export type ArticleState = "active" | "sceduled-delete" | "deleted"
 
@@ -84,6 +85,9 @@ export const articlesSlice = createSlice({
     },
     saveTimerId: (state, action: PayloadAction<string>) => {
       state.deletedIds.push(action.payload)
+    },
+    saveTitle: (state, action: PayloadAction<{ title: string, id: string }>) => {
+      state.byId[action.payload.id].title = action.payload.title
     }
   },
 })
@@ -95,7 +99,8 @@ export const {
   deleteArticle,
   restoreArticle,
   scheduleDeleteArticle,
-  saveTimerId
+  saveTimerId,
+  saveTitle
 } = articlesSlice.actions
 
 export default articlesSlice.reducer

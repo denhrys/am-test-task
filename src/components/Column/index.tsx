@@ -31,7 +31,7 @@ export default function Column({ id }: Props): ReactElement | null {
 				<source media="(max-width: 1024px)" srcSet={article.imageUrlByWidth(1024)} />
 				<img className={s["article-image"]} src={article.imageUrlByWidth(1024)} alt={article.title} />
 			</picture>
-			<EditableTitle title={article.title} />
+			<EditableTitle id={id} title={article.title} />
 		</article>
 	)
 

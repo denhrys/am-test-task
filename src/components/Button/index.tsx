@@ -4,13 +4,14 @@ import s from "./style.module.css"
 
 interface Props {
 	text: string;
+	name?: string;
 	className?: string;
 	type?: string;
-	onClick: (e: React.SyntheticEvent<HTMLButtonElement>) => any
+	onClick?: (e: React.SyntheticEvent<HTMLButtonElement>) => any
 }
 
-export default function Button({ className, text, type = "button", onClick }: Props): ReactElement {
+export default function Button({ className, text, name, type = "button", onClick }: Props): ReactElement {
 	return (
-		<button onClick={onClick} className={cn(s.button, className)}>{text}</button>
+		<button name={name} onClick={onClick} className={cn(s.button, className)}>{text}</button>
 	)
 }
