@@ -20,6 +20,7 @@ module.exports = {
 			routes: path.resolve(__dirname, "src/routes/"),
 			helpers: path.resolve(__dirname, "src/helpers/"),
 			store: path.resolve(__dirname, "src/store/"),
+			models: path.resolve(__dirname, "src/models/"),
 		}
 	},
 	module: {

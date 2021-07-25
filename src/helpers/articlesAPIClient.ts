@@ -20,7 +20,8 @@ axios.interceptors.response.use(function (response) {
 });
 
 export const articlesAPIClient = {
-	getAllArticles() {
-		return axios.get<Row[], Row[]>("https://storage.googleapis.com/aller-structure-task/test_data.json")
+	async getAllArticles() {
+		const response = await axios.get<Row[], Row[]>("https://storage.googleapis.com/aller-structure-task/test_data.json")
+		return response[0]
 	}
 }

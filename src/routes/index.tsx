@@ -13,6 +13,7 @@ export default function Routes(): ReactElement {
 	useEffect(() => {
 		dispatch(getAllArticles())
 	}, [])
+
 	return (
 		<BrowserRouter>
 			<Suspense fallback={<div>Loading...</div>}>

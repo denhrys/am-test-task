@@ -1,0 +1,29 @@
+.article-image {
+	width: 100%;
+	display: block;
+}
+
+.article {
+	position: relative;
+}
+
+.delete-button {
+	visibility: hidden;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+}
+
+.article:hover .delete-button {
+	visibility: visible;
+}
+
+.restore-article {
+	position: absolute;
+	top: 0;	
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+

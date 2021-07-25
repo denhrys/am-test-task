@@ -1,0 +1,11 @@
+.prompt {
+	background-color: chartreuse;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	padding: 10px;
+}
+
+.articles-row {
+	outline: 1px solid red;
+}
