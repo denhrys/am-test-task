@@ -28,7 +28,7 @@ function* watchGetAllArticlesSaga() {
 
 // Schedule article delition
 function* scheduleDeleteArticleSaga(action: PayloadAction<string>) {
-	yield delay(3000)
+	yield delay(5000)
 	yield put(deleteArticle(action.payload))
 }
 
@@ -47,7 +47,7 @@ function* watchRestoreArticleSaga() {
 		if (task?.taskEffect) {
 			yield cancel(task.taskEffect)
 		}
-		scheduledTasks = scheduledTasks.filter(task => task.articleId === action.payload)
+		scheduledTasks = scheduledTasks.filter(task => task.articleId !== action.payload)
 	}
 }
 

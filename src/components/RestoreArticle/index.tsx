@@ -11,7 +11,7 @@ interface Props {
 }
 
 export default function RestoreArticle({ id, className }: Props): ReactElement {
-	const [timeElapsed, setTimeElapsed] = useState(3)
+	const [timeElapsed, setTimeElapsed] = useState(5)
 	const dispatch = useDispatch()
 	const handleClick = () => dispatch(restoreArticle(id))
 

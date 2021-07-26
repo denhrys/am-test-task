@@ -1,11 +1,8 @@
-.prompt {
-	background-color: chartreuse;
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	padding: 10px;
+.section {
+	padding-top: 30px;
 }
 
-.articles-row {
-	outline: 1px solid red;
+.header {
+	margin-bottom: 20px;
+	padding: 0 10px;
 }

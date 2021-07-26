@@ -1,10 +1,6 @@
 import React, { ReactElement } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import cn from "classnames"
-import ArticlesRow from 'components/Column'
-import Portal from 'components/Portal'
-import { RootState } from 'store/appStore'
-import { selectArticlesById, selectIdsByOrder, deleteArticle, selectDeletedIds, restoreArticle } from 'store/articles/articlesSlice'
+import { useSelector } from 'react-redux'
+import { selectIdsByOrder } from 'store/articles/articlesSlice'
 
 import s from "./style.module.css"
 import Column from 'components/Column'
@@ -12,8 +8,8 @@ import Column from 'components/Column'
 export default function index(): ReactElement | null {
 	const articleIDs = useSelector(selectIdsByOrder)
 	return (
-		<div>
-			<h1>Full content</h1>
+		<section className={s.section}>
+			<h2 className={s.header}>Page 1. Full content</h2>
 			{articleIDs.map(rowIDs => (
 				<div key={rowIDs.join(":")} className="row">
 					{rowIDs.map(id => (
@@ -21,6 +17,6 @@ export default function index(): ReactElement | null {
 					))}
 				</div>
 			))}
-		</div>
+		</section>
 	)
 }

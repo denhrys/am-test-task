@@ -25,11 +25,13 @@ export default function Column({ id }: Props): ReactElement | null {
 	return article.isDeleted ? null : (
 		<article className={cn(s.article, article.classNameByWidth())}>
 			{article.isScheduledToBeDeleted && <RestoreArticle id={id} className={s["restore-article"]} />}
-			<Button onClick={handleDeleteButtonClick} className={s["delete-button"]} text="Delete" />
+			{!article.isScheduledToBeDeleted && (
+				<Button onClick={handleDeleteButtonClick} className={s["delete-button"]} text="Delete" />
+			)}
 			<picture>
 				<source media="(max-width: 640px)" srcSet={article.imageUrlByWidth(640)} />
 				<source media="(max-width: 1024px)" srcSet={article.imageUrlByWidth(1024)} />
-				<img className={s["article-image"]} src={article.imageUrlByWidth(1024)} alt={article.title} />
+				<img loading="lazy" className={s["article-image"]} src={article.imageUrlByWidth(1024)} alt={article.title} />
 			</picture>
 			<EditableTitle id={id} title={article.title} />
 		</article>
