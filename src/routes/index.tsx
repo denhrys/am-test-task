@@ -16,20 +16,20 @@ export default function Routes(): ReactElement {
 
 	return (
 		<BrowserRouter>
-			<Suspense fallback={<div>Loading...</div>}>
-				<Switch>
-					{
-						routes.map(({ path, component: Component }) => (
-							<Route key={path} path={path}>
-								<MainLayout>
+			<MainLayout>
+				<Suspense fallback={<div>Loading...</div>}>
+					<Switch>
+						{
+							routes.map(({ path, component: Component }) => (
+								<Route key={path} path={path}>
 									<Component />
-								</MainLayout>
-							</Route>
-						))
-					}
-					<Redirect to={routes[0].path} />
-				</Switch>
-			</Suspense>
+								</Route>
+							))
+						}
+						<Redirect to={routes[0].path} />
+					</Switch>
+				</Suspense>
+			</MainLayout>
 		</BrowserRouter>
 	)
 }
