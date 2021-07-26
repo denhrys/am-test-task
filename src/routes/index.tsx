@@ -6,6 +6,7 @@ import MainLayout from "layouts/MainLayout"
 import { routes } from "./routes"
 import { getAllArticles } from 'store/articles/articlesSlice'
 import { useDispatch } from 'react-redux'
+import Preloader from 'components/Preloader'
 
 export default function Routes(): ReactElement {
 	const dispatch = useDispatch()
@@ -17,7 +18,7 @@ export default function Routes(): ReactElement {
 	return (
 		<BrowserRouter>
 			<MainLayout>
-				<Suspense fallback={<div>Loading...</div>}>
+				<Suspense fallback={<Preloader />}>
 					<Switch>
 						{
 							routes.map(({ path, component: Component }) => (
