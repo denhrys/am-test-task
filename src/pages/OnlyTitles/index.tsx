@@ -19,7 +19,7 @@ export default function OnlyTitles({ }: Props): ReactElement {
 				return rowIDs.map(id => {
 					const article = new ArticleModel(id, articlesByID)
 					return (
-						<li className={s.row}>{article.title}</li>
+						<li key={article.id} className={s.row}>{article.title}</li>
 					)
 				})
 			}

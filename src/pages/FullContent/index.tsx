@@ -10,6 +10,10 @@ export default function index(): ReactElement | null {
 	return (
 		<section className={s.section}>
 			<h2 className={s.header}>Page 1. Full content</h2>
+			<ul className={s.info}>
+				<li>Delete and resore any number of articles in parallel</li>
+				<li>Edit article title</li>
+			</ul>
 			{articleIDs.map(rowIDs => (
 				<div key={rowIDs.join(":")} className="row">
 					{rowIDs.map(id => (

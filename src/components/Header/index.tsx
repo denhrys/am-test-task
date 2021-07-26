@@ -20,7 +20,7 @@ export default function Header({ className, title }: Props): ReactElement {
 						{
 							routes.map(route => {
 								return (
-									<li>
+									<li key={route.path}>
 										<NavLink
 											activeClassName={s["active-nav-item"]}
 											className={s.link} to={route.path} >

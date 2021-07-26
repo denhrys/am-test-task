@@ -1,5 +1,7 @@
 import axios from "axios"
 
+const API_URL = "https://storage.googleapis.com/aller-structure-task/test_data.json"
+
 export interface Article {
 	type: "Article";
 	width: number;
@@ -21,7 +23,7 @@ axios.interceptors.response.use(function (response) {
 
 export const articlesAPIClient = {
 	async getAllArticles() {
-		const response = await axios.get<Row[], Row[]>("https://storage.googleapis.com/aller-structure-task/test_data.json")
+		const response = await axios.get<Row[], Row[]>(API_URL)
 		return response[0]
 	}
 }

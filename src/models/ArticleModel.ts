@@ -12,6 +12,10 @@ export default class ArticleModel {
 		this.data = articlesById[id]
 	}
 
+	get id(): string | undefined {
+		return this.data?.id
+	}
+
 	get isDeleted(): boolean {
 		if (!this.data) return true
 		return this.data?.state === "deleted"
