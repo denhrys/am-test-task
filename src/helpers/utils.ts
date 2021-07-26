@@ -1,5 +1,5 @@
 const getColumnClassName = (width: number): string => {
-	return width > 12 ? `col-1` : `col-${width}`
-}
+  return width > 12 ? `col-1` : `col-${width}`;
+};
 
-export { getColumnClassName }
+export { getColumnClassName };

@@ -1,8 +1,6 @@
-import { all } from "redux-saga/effects"
-import { articlesSaga } from "store/articles/articlesSaga"
+import { all } from "redux-saga/effects";
+import { articlesSaga } from "store/articles/articlesSaga";
 
 export default function* rootSaga() {
-	yield all([
-		articlesSaga()
-	])
+  yield all([articlesSaga()]);
 }
