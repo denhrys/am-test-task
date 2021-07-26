@@ -1,34 +1,34 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,800');
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:400');
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,800");
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:400");
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 
-	/* Colors */
-	--black: #222;
-	--white: #ffffff;
-	--red: #D60000;
-	--red-dark: #a30000;
-	--red-light: #F35D67;
-	--blue-green-dark: #025269;
-	--blue-green-light: #e0f2f1;
-	--yellow: #F1CA3F;
-	--gray: #eff1f4;
+  /* Colors */
+  --black: #222;
+  --white: #ffffff;
+  --red: #d60000;
+  --red-dark: #a30000;
+  --red-light: #f35d67;
+  --blue-green-dark: #025269;
+  --blue-green-light: #e0f2f1;
+  --yellow: #f1ca3f;
+  --gray: #eff1f4;
 
-	--primary-color: var(--medium-green);
-	--secondary-color: var(--light-green);
-	--accent-color: var(--dark-green);
-	--border-color: var(--dark-gray);
-	--text-color: var(--black);
+  --primary-color: var(--medium-green);
+  --secondary-color: var(--light-green);
+  --accent-color: var(--dark-green);
+  --border-color: var(--dark-gray);
+  --text-color: var(--black);
 
-	/* Fonts */
-	--heading-font: 'Poppins', sans-serif;
-	--body-font: 'Work Sans', sans-serif; 
+  /* Fonts */
+  --heading-font: "Poppins", sans-serif;
+  --body-font: "Work Sans", sans-serif;
 }
 
 html {
-	font-size: 100%;
-} 
+  font-size: 100%;
+}
 
 body {
   font-family: var(--body-font);
@@ -39,9 +39,15 @@ body {
   color: var(--black);
 }
 
-p {margin-bottom: 1rem;}
+p {
+  margin-bottom: 1rem;
+}
 
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
   margin: 0;
   font-family: var(--heading-font);
   font-weight: 800;
@@ -53,52 +59,55 @@ h1 {
   font-size: 2rem;
 }
 
-h2 {font-size: 2.369rem;}
-h3 {font-size: 2rem;}
-
+h2 {
+  font-size: 2.369rem;
+}
+h3 {
+  font-size: 2rem;
+}
 
 /* Grid */
 
 .row {
-	display: flex;
+  display: flex;
 }
 
 .col {
-	--col-width: calc(100% / 12)
+  --col-width: calc(100% / 12);
 }
 .col-1 {
-	width: var(--col-width);
+  width: var(--col-width);
 }
 .col-2 {
-	width: calc(var(--col-width) * 2);
+  width: calc(var(--col-width) * 2);
 }
 .col-3 {
-	width: calc(var(--col-width) * 3);
+  width: calc(var(--col-width) * 3);
 }
 .col-4 {
-	width: calc(var(--col-width) * 4);
+  width: calc(var(--col-width) * 4);
 }
 .col-5 {
-	width: calc(var(--col-width) * 5);
+  width: calc(var(--col-width) * 5);
 }
 .col-6 {
-	width: calc(var(--col-width) * 6);
+  width: calc(var(--col-width) * 6);
 }
 .col-7 {
-	width: calc(var(--col-width) * 7);
+  width: calc(var(--col-width) * 7);
 }
 .col-8 {
-	width: calc(var(--col-width) * 8);
+  width: calc(var(--col-width) * 8);
 }
-.col-2 {
-	width: calc(var(--col-width) * 2);
+.col-9 {
+  width: calc(var(--col-width) * 9);
 }
 .col-10 {
-	width: calc(var(--col-width) * 10);
+  width: calc(var(--col-width) * 10);
 }
 .col-11 {
-	width: calc(var(--col-width) * 11);
+  width: calc(var(--col-width) * 11);
 }
 .col-12 {
-	width: calc(var(--col-width) * 12);
+  width: calc(var(--col-width) * 12);
 }
