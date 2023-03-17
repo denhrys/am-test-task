@@ -9,6 +9,8 @@
 - while time to delete has not passed, you can restore the article clicking the Restore button
 - You can edit the title of an article 
 
+Stack: TypeScript, React, Redux, Redux-Saga
+
 Development:
 git clone and `npm run dev`
 
