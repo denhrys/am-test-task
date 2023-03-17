@@ -1,6 +1,6 @@
 # Test task
 
-[RESULT DEMO HERE (on AWS Amplify)](https://master.dyfjakxiyj7r.amplifyapp.com/full-content)
+[RESULT DEMO HERE (AWS Amplify link)](https://master.dyfjakxiyj7r.amplifyapp.com/full-content)
 
 **App features implemented according to the task description:**
 - Hover over article image, the Delete button will be shown
@@ -27,6 +27,6 @@ The following is an example of a row that appears in the response. The width is 
 
 For imageUrl, the height and width of the image can be modified by adding &height=X and/or &width=X to the URL. The other fields are hopefully self-explanatory.
 
-##Bonus Task
+## Bonus Task
 Create two separate routes (or pages if you will), one that shows the full articles with images using the rows and columns grid explained in the JSON structure, and another route that only shows a simple one column list containing article titles. Make sure the browser does not download any unused JavaScript files on the given routes.
 
